@@ -1,0 +1,24 @@
+body
+{
+  background-color: #283332;
+}
+
+.conts
+{
+  position: absolute;
+  left: 145px;
+  font-family: 'Varela Round', sans-serif;
+  text-decoration: none;
+  font-size: 40px;
+  top: 120px;
+  color: white;
+}
+
+.ac
+{
+  position: absolute;
+  left: 165px;
+  top: 120px;
+  font-size: 40px;
+
+}

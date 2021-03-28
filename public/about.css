@@ -1,0 +1,84 @@
+body
+{
+  /* background-color: #362c2c */
+  background-image: url("https://media1.tenor.com/images/c33846280717b9bcf240233b12cf822f/tenor.gif?itemid=19457480");
+  background-size: cover;
+}
+p
+{
+  color: #c5fadc;
+  font-size: 40px;
+  position: absolute;
+  left: 78px;
+  top: 40px;
+  text-align: center;
+  font-family: 'Varela Round', sans-serif;
+  opacity: 0.58
+}
+
+h1
+{
+  position: absolute;
+  color: yellow;
+  font-size: 80px;
+  left: 620px;
+  top: 135px;
+  font-family: 'Varela Round', sans-serif;
+  opacity: 0.8;
+  text-align: center;
+
+}
+
+.list
+{
+  position: absolute;
+  color: #c8d7de;
+  left: 520px;
+  font-size: 40px;
+  top: 295px;
+
+}
+
+.chess
+{
+  color: #c8d7de;
+  text-decoration: none;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.cp
+{
+  color: #c8d7de;
+  text-decoration: none;
+  font-family: 'Varela Round', sans-serif;
+  text-align: center;
+}
+
+.sb
+{
+  color: #c8d7de;
+  text-decoration: none;
+  font-family: 'Varela Round', sans-serif;
+  text-align: center;
+
+}
+/* .ml9 {
+  position: relative;
+  font-weight: 200;
+  font-size: 4em;
+}
+
+.ml9 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml9 .letter {
+  transform-origin: 50% 100%;
+  display: inline-block;
+  line-height: 1em;
+} */
