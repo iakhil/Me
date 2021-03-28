@@ -5,7 +5,7 @@ function blog()
 
 function about()
 {
-  window.open("about.html")
+  window.open("public/about.html")
 }
 
 function contact()
