@@ -23,3 +23,8 @@ function dehighlight(btnID)
 {
   document.getElementById(btnID).style.backgroundColor = "#a8f0d9";
 } 
+
+function proj()
+{
+ window.open("projects.html");
+}
