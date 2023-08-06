@@ -1,6 +1,6 @@
 function blog()
 {
-  window.open("https://www.mildlycurious.com/")
+  window.open("https://quaint.substack.com/")
 }
 
 function about()
