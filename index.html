@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <title></title>
   </head>
   <body>
@@ -13,10 +14,21 @@
   <button id = "home" onmouseover = "highlight(this.id)" onmouseout="dehighlight(this.id)" type="button" name="button" >🏠</button>
   <button onclick = "proj()" id = "proj" onmouseover = "highlight(this.id)" onmouseout="dehighlight(this.id)">Projects </button>
   <button onclick = "about()" type="button" name="button" id = "about" onmouseover = "highlight(this.id)" onmouseout="dehighlight(this.id)">About</button>
-  <button onclick = "contact()" type="button" name="button" id = "cont" onmouseover = "highlight(this.id)" onmouseout="dehighlight(this.id)">Contact</button>
+  <div class="dropdown">
+
+    <button class="dropdown-button" type="button" name="button" id = "cont" onmouseover = "highlight(this.id)" onmouseout="dehighlight(this.id)">Contact</button>
+    <div class="dropdown-menu">
+
+      <a href="https://www.linkedin.com/in/akhil-ivaturi-50475520/"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/iakhil"><i class="fab fa-github"> </i></a>
+      <a href="https://twitter.com/GordianKnot256"> <i class="fab fa-twitter"></i> </a>
+
+    </div>
+
+  </div>
   <button onclick = "blog()" type="button" name="button" id = "blog" onmouseover = "highlight(this.id)" onmouseout="dehighlight(this.id)">Blog</button>
   </div>
-  <h2>Hello! You are viewing the website of I Akhil.</h2>
+  <h2>Hello! You are viewing the website of Akhil Ivaturi.</h2>
   
   </body>
 
