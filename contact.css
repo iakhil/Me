@@ -1,0 +1,30 @@
+body
+{
+  background-color: #a6edda;
+}
+
+.conts
+{
+  position: absolute;
+  left: 145px;
+  font-family: 'Varela Round', sans-serif;
+  text-decoration: none;
+  font-size: 40px;
+  text-align: center;
+  top: 120px;
+  color: white;
+}
+
+.ac
+{
+  position: absolute;
+  left: 165px;
+  top: 120px;
+  font-size: 40px;
+
+}
+#home 
+{
+  position: absolute;
+  margin-top: -370px;
+}
