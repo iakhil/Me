@@ -6,6 +6,11 @@ body
   background-size: cover;
   /* background-color: transparent; */
   height: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
   padding: 0;
   margin: 0;
 }
@@ -76,21 +81,24 @@ body
 h2
 {
   color: white;
-  position: absolute;
-  top: 140px;
+  position: relative;
   font-size: 58px;
   font-family: 'Pangolin', cursive;
-  right: 200px;
 }
 
 ul 
 {
   color: yellow;
-  position: absolute;
-  top: 480px;
+  position: relative;
   font-size: 58px;
   font-family: 'Pangolin', cursive;
-  left: 280px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
 }
 
 #home 
@@ -162,10 +170,6 @@ ul
 .fab {
   color: white; 
   
-}
-
-ul {
-  list-style-type: none;
 }
 
 a {
