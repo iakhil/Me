@@ -83,6 +83,16 @@ h2
   right: 200px;
 }
 
+ul 
+{
+  color: yellow;
+  position: absolute;
+  top: 480px;
+  font-size: 58px;
+  font-family: 'Pangolin', cursive;
+  left: 280px;
+}
+
 #home 
 {
   color: red;
@@ -150,7 +160,13 @@ h2
 }
 
 .fab {
-  color: rgb(76, 168, 255); 
-  font-size: 32px;
+  color: white; 
   
+}
+
+
+
+a {
+  color: white; 
+  text-decoration: none;
 }
