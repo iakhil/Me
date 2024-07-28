@@ -1,33 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+    <style>
         body {
             background-color: #1b1826;
             color: white;
             font-family: 'Averia Serif Libre', cursive;
             margin: 0;
-            padding: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: yellow;
+            margin-bottom: 30px;
         }
 
         .container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .projs {
-            font-size: 2em;
+            font-size: 1.5em;
+            margin: 15px 0;
+            position: relative;
+            width: 100%;
             text-align: center;
-            color: yellow;
-            margin: 10px 0;
         }
 
-        .projs:hover {
-            color: black;
+        .projs a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .projs:hover a {
+            color: yellow;
         }
 
         .description {
@@ -37,65 +51,63 @@
             color: black;
             padding: 10px;
             border-radius: 5px;
-            font-size: 1em;
+            font-size: 0.8em;
             max-width: 200px;
             z-index: 1000;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
-        @media (min-width: 768px) {
-            .container {
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .projs {
-                font-size: 1.5em;
-                margin: 20px;
-            }
+        .github-icon {
+            margin-right: 10px;
         }
     </style>
     <title>Projects</title>
 </head>
 <body>
+    <h1>Keep Shipping</h1>
     <div class="container">
         <div class="projs">
-            <a href="https://github.com/iakhil/Odds-and-Evens/tree/master"><i class="fab fa-github"></i></a>
-            <a href="https://iakhil.github.io/Odds-and-Evens/" id="odds" onmouseover="showDescription(this, 'Score points by picking a number different from the computer. If the number you have picked is the same as the computer, you are out.')" onmouseout="hideDescription(this)" style="text-decoration: none; color: white;">Odds and Evens</a>
+            <a href="https://github.com/iakhil/Odds-and-Evens/tree/master" class="github-icon"><i class="fab fa-github"></i></a>
+            <a href="https://iakhil.github.io/Odds-and-Evens/" id="odds" onmouseover="showDescription(this, 'Score points by picking a number different from the computer. If the number you have picked is the same as the computer, you are out.')" onmouseout="hideDescription(this)">Odds and Evens</a>
             <div class="description" id="odds-desc"></div>
         </div>
         
         <div class="projs">
-            <a href="https://github.com/iakhil/Password_Generator-"><i class="fab fa-github"></i></a>
-            <a href="https://iakhil.github.io/Password_Generator-/" id="pwd" onmouseover="showDescription(this, 'Generate secure passwords with ease.')" onmouseout="hideDescription(this)" style="text-decoration: none; color: white;">Password Generator</a>
+            <a href="https://github.com/iakhil/Password_Generator-" class="github-icon"><i class="fab fa-github"></i></a>
+            <a href="https://iakhil.github.io/Password_Generator-/" id="pwd" onmouseover="showDescription(this, 'Generate secure passwords with ease.')" onmouseout="hideDescription(this)">Password Generator</a>
             <div class="description" id="pwd-desc"></div>
         </div>
         
         <div class="projs">
-            <a href="https://github.com/iakhil/ELI5"><i class="fab fa-github"></i></a>
-            <a href="https://github.com/iakhil/ELI5" id="ipl" onmouseover="showDescription(this, 'Highlight any text in your browser and get its explanation in a simplified form.')" onmouseout="hideDescription(this)" style="text-decoration: none; color: white;">ELI5 Chrome Extension</a>
+            <a href="https://github.com/iakhil/ELI5" class="github-icon"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/iakhil/ELI5" id="ipl" onmouseover="showDescription(this, 'Highlight any text in your browser and get its explanation in a simplified form.')" onmouseout="hideDescription(this)">ELI5 Chrome Extension</a>
             <div class="description" id="ipl-desc"></div>
         </div>
         
         <div class="projs">
-            <a href="https://pogqj.csb.app/" id="notes" onmouseover="showDescription(this, 'A simple notes-taking app.')" onmouseout="hideDescription(this)" style="text-decoration: none; color: white;">Notes-Taking App</a>
+            <a href="https://pogqj.csb.app/" id="notes" onmouseover="showDescription(this, 'A simple notes-taking app.')" onmouseout="hideDescription(this)">Notes-Taking App</a>
             <div class="description" id="notes-desc"></div>
         </div>
         
         <div class="projs">
-            <a href="https://github.com/iakhil/Speed-Typing"><i class="fab fa-github"></i></a>
-            <a href="https://iakhil.github.io/Speed-Typing/" id="speed-typing" onmouseover="showDescription(this, 'Measure how much time it takes for you to type all the alphabets.')" onmouseout="hideDescription(this)" style="text-decoration: none; color: white;">Speed Typing</a>
+            <a href="https://github.com/iakhil/Speed-Typing" class="github-icon"><i class="fab fa-github"></i></a>
+            <a href="https://iakhil.github.io/Speed-Typing/" id="speed-typing" onmouseover="showDescription(this, 'Measure how much time it takes for you to type all the alphabets.')" onmouseout="hideDescription(this)">Speed Typing</a>
             <div class="description" id="speed-typing-desc"></div>
         </div>
+
+        <div class="projs">
+            <a href="https://github.com/iakhil/wordatlas" class="github-icon"><i class="fab fa-github"></i></a>
+            <a href="http://iakhil.pythonanywhere.com/" id="word-atlas" onmouseover="showDescription(this, 'A word game to improve vocabulary.')" onmouseout="hideDescription(this)">Word Atlas</a> 
+            <div class="description" id="word-atlas-desc"></div>
+        </div>
     </div>
-    <script type="text/javascript">
+
+    <script>
         function showDescription(element, text) {
             const desc = document.getElementById(element.id + '-desc');
             desc.style.display = 'block';
             desc.textContent = text;
-            const rect = element.getBoundingClientRect();
-            desc.style.top = (window.scrollY + rect.top + rect.height + 5) + 'px';
-            desc.style.left = (window.scrollX + rect.left) + 'px';
         }
 
         function hideDescription(element) {
