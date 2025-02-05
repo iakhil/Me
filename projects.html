@@ -5,64 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
     <style>
-     body {
-    background-color: #121212; /* Darker shade for a modern dark theme */
-    color: #e0e0e0; /* Soft gray for better readability on dark background */
-    font-family: 'Inter', sans-serif; /* Modern and clean sans-serif font */
-    margin: 0;
-    padding: 20px;
-    line-height: 1.6; /* Improve text readability */
-    letter-spacing: 0.5px; /* Slightly spaced letters for a refined look */
-}
+        body {
+            background-color: #0a192f; /* Dark blue background */
+            color: #8892b0; /* Muted blue-gray for text */
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.6;
+            letter-spacing: 0.5px;
+        }
 
         h1 {
             text-align: center;
-
-            color: yellow;
-            margin-bottom: 30px;
+            color: #64ffda; /* Mint green */
+            margin-bottom: 50px;
+            font-size: 2.5em;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
         .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            max-width: 600px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
             margin: 0 auto;
+            padding: 0 20px;
         }
 
         .projs {
-            font-size: 1.5em;
-            margin: 15px 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
-            width: 100%;
-            text-align: center;
+            text-align: left;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .projs:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.08);
         }
 
         .projs a {
             text-decoration: none;
-            color: white;
+            color: #ccd6f6; /* Light blue-gray */
+            font-size: 1.2em;
+            font-weight: 600;
+            display: inline-block;
         }
 
         .projs:hover a {
-            color: yellow;
+            color: #64ffda; /* Mint green */
         }
 
         .description {
             display: none;
             position: absolute;
-            background-color: yellow;
-            color: black;
-            padding: 10px;
-            border-radius: 5px;
-            font-size: 0.8em;
-            max-width: 200px;
+            background-color: #112240; /* Darker blue */
+            color: #8892b0;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            max-width: 250px;
             z-index: 1000;
             left: 50%;
             transform: translateX(-50%);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(100, 255, 218, 0.1);
         }
 
         .github-icon {
-            margin-right: 10px;
+            color: #8892b0;
+            margin-right: 15px;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        .github-icon:hover {
+            color: #64ffda;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
         }
     </style>
     <title>Projects</title>
