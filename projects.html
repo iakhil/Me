@@ -1,291 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
-    <style>
-        body {
-            background-color: #0a192f; /* Dark blue background */
-            color: #8892b0; /* Muted blue-gray for text */
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 40px 20px;
-            line-height: 1.6;
-            letter-spacing: 0.5px;
-        }
-
-        h1 {
-            text-align: center;
-            color: #64ffda; /* Mint green */
-            margin-bottom: 50px;
-            font-size: 2.5em;
-            font-weight: 800;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .projs {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            padding: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            text-align: left;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .projs:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            background: rgba(255, 255, 255, 0.08);
-        }
-
-        .projs a {
-            text-decoration: none;
-            color: #ccd6f6; /* Light blue-gray */
-            font-size: 1.2em;
-            font-weight: 600;
-            display: inline-block;
-        }
-
-        .projs:hover a {
-            color: #64ffda; /* Mint green */
-        }
-
-        .description {
-            display: none;
-            position: absolute;
-            background-color: #112240; /* Darker blue */
-            color: #8892b0;
-            padding: 15px;
-            border-radius: 8px;
-            font-size: 0.9em;
-            max-width: 250px;
-            z-index: 1000;
-            left: 50%;
-            transform: translateX(-50%);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(100, 255, 218, 0.1);
-        }
-
-        .github-icon {
-            color: #8892b0;
-            margin-right: 15px;
-            font-size: 1.2em;
-            transition: color 0.3s ease;
-        }
-
-        .github-icon:hover {
-            color: #64ffda;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                grid-template-columns: 1fr;
-            }
-            
-            h1 {
-                font-size: 2em;
-            }
-        }
-    </style>
-    <title>Projects</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ec">
+  <meta name="description" content="Explore 28 projects by Akhil Ivaturi: AI tools, learning experiments, games, and everyday utilities.">
+  <meta property="og:title" content="Projects — Akhil Ivaturi">
+  <meta property="og:description" content="Explore 28 projects by Akhil Ivaturi: AI tools, learning experiments, games, and everyday utilities.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://iakhil.github.io/Me/public/og.png">
+  <meta property="og:image:width" content="1536">
+  <meta property="og:image:height" content="1024">
+  <meta property="og:image:alt" content="Akhil Ivaturi. Curious by default. Builder by instinct.">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Projects — Akhil Ivaturi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700;750&amp;family=DM+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
 </head>
 <body>
-    <h1>Keep Shipping</h1>
-    <div class="container">
-        <div class="projs">
-            <a href="https://github.com/iakhil/Odds-and-Evens/tree/master" class="github-icon"><i class="fab fa-github"></i></a>
-            <a href="https://iakhil.github.io/Odds-and-Evens/" id="odds" onmouseover="showDescription(this, 'Score points by picking a number different from the computer. If the number you have picked is the same as the computer, you are out.')" onmouseout="hideDescription(this)">Odds and Evens</a>
-            <div class="description" id="odds-desc"></div>
-        </div>
-        
-        <div class="projs">
-            <a href="https://github.com/iakhil/Password_Generator-" class="github-icon"><i class="fab fa-github"></i></a>
-            <a href="https://iakhil.github.io/Password_Generator-/" id="pwd" onmouseover="showDescription(this, 'Generate secure passwords with ease.')" onmouseout="hideDescription(this)">Password Generator</a>
-            <div class="description" id="pwd-desc"></div>
-        </div>
-        
-        <div class="projs">
-            <a href="https://github.com/iakhil/ELI5" class="github-icon"><i class="fab fa-github"></i></a>
-            <a href="https://chromewebstore.google.com/detail/eli5-buddy/dioeldknkgljlaanhadnoficlmoccofp" id="ipl" onmouseover="showDescription(this, 'Highlight any text in your browser and get its explanation in a simplified form.')" onmouseout="hideDescription(this)">ELI5 Chrome Extension</a>
-            <div class="description" id="ipl-desc"></div>
-        </div>
-        
-        <div class="projs">
-            <a href="https://pogqj.csb.app/" id="notes" onmouseover="showDescription(this, 'A simple notes-taking app.')" onmouseout="hideDescription(this)">Notes-Taking App</a>
-            <div class="description" id="notes-desc"></div>
-        </div>
-        
-        <div class="projs">
-            <a href="https://github.com/iakhil/Speed-Typing" class="github-icon"><i class="fab fa-github"></i></a>
-            <a href="https://iakhil.github.io/Speed-Typing/" id="speed-typing" onmouseover="showDescription(this, 'Measure how much time it takes for you to type all the alphabets.')" onmouseout="hideDescription(this)">Speed Typing</a>
-            <div class="description" id="speed-typing-desc"></div>
-        </div>
-
-        <div class="projs">
-            <a href="https://github.com/iakhil/wordatlas" class="github-icon"><i class="fab fa-github"></i></a>
-            <a href="http://iakhil.pythonanywhere.com/" id="word-atlas" onmouseover="showDescription(this, 'A word game to improve vocabulary.')" onmouseout="hideDescription(this)">Word Atlas</a> 
-            <div class="description" id="word-atlas-desc"></div>
-        </div>
-
-        <div class="projs">
-            <a href="https://github.com/iakhil/Calorify" class="github-icon"><i class="fab fa-github"></i></a>
-            <a href="https://iakhil.github.io/CalorifyWebsite/" id="calorify" onmouseover="showDescription(this, 'An app to track calories, get healthy recipes and more.')" onmouseout="hideDescription(this)">Calorify</a> 
-            <div class="description" id="calorify-desc"></div>
-        </div>
-
-        <div class="projs">
-            <a href="https://github.com/iakhil/learn_a_word" class="github-icon"><i class="fab fa-github"></i></a>
-            <a href="https://iakhil.github.io/learn_a_word/" id="law" onmouseover="showDescription(this, 'A web-app to help you learn a new word and try to use it in a sentence.')" onmouseout="hideDescription(this)">Learn a Word</a> 
-            <div class="description" id="law-desc"></div>
-        </div>
-
-        <div class="projs">
-            <a href="https://github.com/iakhil/cardex" class="github-icon"><i class="fab fa-github"></i></a>
-            <a href="https://iakhil.github.io/cardex/" id="cardex" onmouseover="showDescription(this, 'A web-app to help you identify a car.')" onmouseout="hideDescription(this)">Cardex</a> 
-            <div class="description" id="cardex-desc"></div>
-        </div>
-
-        <div class="projs">
-            <a href="https://github.com/iakhil/haggle_chat" class="github-icon"><i class="fab fa-github"></i></a>
-            <a href="https://iakhil.github.io/haggle_chat/" id="haggle_chat" onmouseover="showDescription(this, 'Negotiate your salary with the HR of CashCorp.')" onmouseout="hideDescription(this)">Haggle Chat</a> 
-            <div class="description" id="haggle_chat-desc"></div>
-        </div>
-
-        <div class="projs">
-            <a href="https://github.com/iakhil/destinize" class="github-icon"><i class="fab fa-github"></i></a>
-            <a href="https://iakhil.github.io/destinize/" id="destinize" onmouseover="showDescription(this, 'Plan your next trip.')" onmouseout="hideDescription(this)">Destinize</a> 
-            <div class="description" id="destinize-desc"></div>
-        </div>
-
-        <div class="projs">
-            <a href="https://github.com/iakhil/craft_resume" class="github-icon"><i class="fab fa-github"></i></a>
-            <a href="https://iakhil.github.io/craft_resume/" id="cr" onmouseover="showDescription(this, 'Generate a LaTeX-style resume.')" onmouseout="hideDescription(this)">Craft Resume</a> 
-            <div class="description" id="cr-desc"></div>
-        </div>
-
-        <div class="projs">
-            <a href="https://github.com/iakhil/wiki_wise" class="github-icon"><i class="fab fa-github"></i></a>
-            <a href="https://wikiwise.info/" id="ww" onmouseover="showDescription(this, 'Summarize Wikipedia articles and have a quiz to test your understanding.')" onmouseout="hideDescription(this)">Wiki Wise</a> 
-            <div class="description" id="ww-desc"></div>
-        </div>
-
-        <div class="projs">
-            <a href="https://github.com/iakhil/habit_sketch" class="github-icon"><i class="fab fa-github"></i></a>
-            <a href="https://iakhil.github.io/habit_sketch/" id="hs" onmouseover="showDescription(this, 'Keep track of your daily habits.')" onmouseout="hideDescription(this)">Habit Sketch</a> 
-            <div class="description" id="hs-desc"></div>
-        </div>
-
-        <div class="projs">
-            <a href="https://github.com/iakhil/timelines" class="github-icon"><i class="fab fa-github"></i></a>
-            <a href="https://iakhil.github.io/timelines/" id="timelines" onmouseover="showDescription(this, 'Visualize the timelines of different inventions.')" onmouseout="hideDescription(this)">Timelines</a> 
-            <div class="description" id="timelines-desc"></div>
-        </div>
-
-        <div class="projs">
-            <a href="https://github.com/iakhil/ai_grader" class="github-icon"><i class="fab fa-github"></i></a>
-            <a href="https://automark.dev" id="ai-grader" onmouseover="showDescription(this, 'A platform to assist teachers with grading.')" onmouseout="hideDescription(this)">AutoMark</a> 
-            <div class="description" id="ai-grader-desc"></div>
-        </div>
-
-
-        <div class="projs">
-            <a href="https://github.com/iakhil/palchemist" class="github-icon"><i class="fab fa-github"></i></a>
-            <a href="https://iakhil.github.io/palchemist/" id="palchemist" onmouseover="showDescription(this, 'Combine different elements to create new elements.')" onmouseout="hideDescription(this)">Palchemist</a> 
-            <div class="description" id="palchemist-desc"></div>
-        </div>
-
-        <div class="projs">
-            <a href="https://github.com/iakhil/planet_defense" class="github-icon"><i class="fab fa-github"></i></a>
-            <a href="https://iakhil.github.io/planet_defense/" id="pd" onmouseover="showDescription(this, 'Defend Earth from asteroids by shooting laser.')" onmouseout="hideDescription(this)">Planet Defense</a> 
-            <div class="description" id="pd-desc"></div>
-        </div>
-
-
-        <div class="projs">
-            <a href="https://github.com/iakhil/cric_stats" class="github-icon"><i class="fab fa-github"></i></a>
-            <a href="https://iakhil.github.io/cric_stats/" id="cs" onmouseover="showDescription(this, 'Test your knowledge of cricket stats.')" onmouseout="hideDescription(this)">Cricket Stats Game</a> 
-            <div class="description" id="cs-desc"></div>
-        </div>
-
-
-        <div class="projs">
-            <a href="https://github.com/iakhil/expense_tracker" class="github-icon"><i class="fab fa-github"></i></a>
-            <a href="https://iakhil.github.io/expense_tracker/" id="et" onmouseover="showDescription(this, 'Track your expenses.')" onmouseout="hideDescription(this)">Expense Tracker</a> 
-            <div class="description" id="et-desc"></div>
-        </div>
-
-        <div class="projs">
-            <a href="https://github.com/iakhil/parlance" class="github-icon"><i class="fab fa-github"></i></a>
-            <a href="https://iakhil.github.io/parlance/" id="par" onmouseover="showDescription(this, 'Learn new words through a fun UX.')" onmouseout="hideDescription(this)">Parlance</a> 
-            <div class="description" id="par-desc"></div>
-        </div>
-
-        <div class="projs">
-            <a href="https://github.com/iakhil/parlance" class="github-icon"><i class="fab fa-app-store"></i></a>
-            <a href="https://apps.apple.com/us/app/play-parlance/id6748587583" id="par" onmouseover="showDescription(this, 'Learn new words through a fun UX.')" onmouseout="hideDescription(this)">Parlance App</a> 
-            <div class="description" id="parapp-desc"></div>
-        </div>
-
-
-        <div class="projs">
-            <a href="https://phronesis-7wgq.onrender.com/" id="par" onmouseover="showDescription(this, 'The Learn Anything App')" onmouseout="hideDescription(this)">Phronesis</a> 
-            <div class="description" id="phronesis-desc"></div>
-        </div>
-
-        <div class="projs">
-            <a href="https://iakhil.github.io/llm-chess/" id="llm-chess" onmouseover="showDescription(this, 'Play chess against LLMs.')" onmouseout="hideDescription(this)">LLM Chess</a> 
-            <div class="description" id="llm-chess-desc"></div>
-        </div>
-
-
-        <div class="projs">
-            <a href="https://ai-shopping-assistant-bqon.onrender.com" id="shop-ai" onmouseover="showDescription(this, 'Shop like it is 2026.')" onmouseout="hideDescription(this)">Shopping Assistant</a> 
-            <div class="description" id="shop-ai-desc"></div>
-        </div>
-
-        <div class="projs">
-            <a href="https://chess-analysis-03u0.onrender.com" id="chess-ai" onmouseover="showDescription(this, 'Get personalized insights into your chess games.')" onmouseout="hideDescription(this)">Ivory Tower</a> 
-            <div class="description" id="chess-ai-desc"></div>
-        </div>
-
-        <div class="projs">
-            <a href="https://puzzle-bench.onrender.com/" id="puzzle-bench" onmouseover="showDescription(this, 'A benchmark to evaluate the ability of LLMs to operate the browser and solve different puzzles.')" onmouseout="hideDescription(this)">Puzzle Bench</a> 
-            <div class="description" id="puzzle-bench-desc"></div>
-        </div>
-
-
-        <div class="projs">
-            <a href="https://iakhil.github.io/hermes-studio/" id="hermes-studio" onmouseover="showDescription(this, 'A GUI to install and set up Hermes.')" onmouseout="hideDescription(this)">Hermes Studio</a> 
-            <div class="description" id="hermes-studio-desc"></div>
-        </div>
-
-    </div>
-
-    <script>
-        function showDescription(element, text) {
-            const desc = document.getElementById(element.id + '-desc');
-            desc.style.display = 'block';
-            desc.textContent = text;
-        }
-
-        function hideDescription(element) {
-            const desc = document.getElementById(element.id + '-desc');
-            desc.style.display = 'none';
-        }
-    </script>
+  <a class="skip-link" href="#main">Skip to content</a><header class="site-header wrap">
+    <a class="wordmark" href="index.html" aria-label="Akhil Ivaturi home">ai<span class="brand-dot">.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="projects.html" aria-current="page">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="https://akhilivaturi.substack.com/">Writing <span aria-hidden="true">↗</span></a>
+    </nav>
+    <a class="nav-contact" href="contact.html">Let’s talk <span aria-hidden="true">↗</span></a>
+  </header>
+<main id="main" class="wrap archive-main"><section class="page-intro" id="top"><span class="eyebrow section-index">The project archive / 28 experiments &amp; counting</span><h1>Keep <em>shipping.</em></h1><p>A collection of useful tools, curious experiments, and things built just to see what happens.</p></section>
+<div class="archive-controls" hidden><div class="filter-buttons" role="group" aria-label="Filter projects"><button type="button" data-filter="All" aria-pressed="true">All</button><button type="button" data-filter="AI &amp; tools" aria-pressed="false">AI &amp; tools</button><button type="button" data-filter="Learning" aria-pressed="false">Learning</button><button type="button" data-filter="Play" aria-pressed="false">Play</button><button type="button" data-filter="Everyday" aria-pressed="false">Everyday</button></div><label class="search-box"><span class="sr-only">Search projects</span><input type="search" id="project-search" placeholder="Find something interesting…" autocomplete="off"><span aria-hidden="true">⌕</span></label></div>
+<div class="archive-caption eyebrow"><span id="project-count" role="status" aria-live="polite">28 projects</span><span>Made with curiosity</span></div>
+<div class="archive-list"><article class="archive-item" data-category="AI &amp; tools"><span class="project-number eyebrow">01</span><div class="archive-copy"><h2><a href="https://iakhil.github.io/hermes-studio/">Hermes Studio <span aria-hidden="true">↗</span></a></h2><p>A GUI to install and set up Hermes.</p></div><span class="category-tag">AI &amp; tools</span><div class="archive-actions"><a href="https://iakhil.github.io/hermes-studio/" aria-label="Explore Hermes Studio">Explore ↗</a></div></article>
+<article class="archive-item" data-category="AI &amp; tools"><span class="project-number eyebrow">02</span><div class="archive-copy"><h2><a href="https://puzzle-bench.onrender.com/">Puzzle Bench <span aria-hidden="true">↗</span></a></h2><p>A benchmark to evaluate the ability of LLMs to operate the browser and solve different puzzles.</p></div><span class="category-tag">AI &amp; tools</span><div class="archive-actions"><a href="https://puzzle-bench.onrender.com/" aria-label="Explore Puzzle Bench">Explore ↗</a></div></article>
+<article class="archive-item" data-category="AI &amp; tools"><span class="project-number eyebrow">03</span><div class="archive-copy"><h2><a href="https://chess-analysis-03u0.onrender.com">Ivory Tower <span aria-hidden="true">↗</span></a></h2><p>Get personalized insights into your chess games.</p></div><span class="category-tag">AI &amp; tools</span><div class="archive-actions"><a href="https://chess-analysis-03u0.onrender.com" aria-label="Explore Ivory Tower">Explore ↗</a></div></article>
+<article class="archive-item" data-category="AI &amp; tools"><span class="project-number eyebrow">04</span><div class="archive-copy"><h2><a href="https://ai-shopping-assistant-bqon.onrender.com">Shopping Assistant <span aria-hidden="true">↗</span></a></h2><p>Shop like it is 2026.</p></div><span class="category-tag">AI &amp; tools</span><div class="archive-actions"><a href="https://ai-shopping-assistant-bqon.onrender.com" aria-label="Explore Shopping Assistant">Explore ↗</a></div></article>
+<article class="archive-item" data-category="AI &amp; tools"><span class="project-number eyebrow">05</span><div class="archive-copy"><h2><a href="https://iakhil.github.io/llm-chess/">LLM Chess <span aria-hidden="true">↗</span></a></h2><p>Play chess against LLMs.</p></div><span class="category-tag">AI &amp; tools</span><div class="archive-actions"><a href="https://iakhil.github.io/llm-chess/" aria-label="Explore LLM Chess">Explore ↗</a></div></article>
+<article class="archive-item" data-category="Learning"><span class="project-number eyebrow">06</span><div class="archive-copy"><h2><a href="https://phronesis-7wgq.onrender.com/">Phronesis <span aria-hidden="true">↗</span></a></h2><p>The Learn Anything App</p></div><span class="category-tag">Learning</span><div class="archive-actions"><a href="https://phronesis-7wgq.onrender.com/" aria-label="Explore Phronesis">Explore ↗</a></div></article>
+<article class="archive-item" data-category="Learning"><span class="project-number eyebrow">07</span><div class="archive-copy"><h2><a href="https://apps.apple.com/us/app/play-parlance/id6748587583">Parlance App <span aria-hidden="true">↗</span></a></h2><p>Learn new words through a fun UX.</p></div><span class="category-tag">Learning</span><div class="archive-actions"><a class="source-link" href="https://github.com/iakhil/parlance" aria-label="Source code for Parlance App">Code ↗</a><a href="https://apps.apple.com/us/app/play-parlance/id6748587583" aria-label="Explore Parlance App">Explore ↗</a></div></article>
+<article class="archive-item" data-category="Learning"><span class="project-number eyebrow">08</span><div class="archive-copy"><h2><a href="https://iakhil.github.io/parlance/">Parlance <span aria-hidden="true">↗</span></a></h2><p>Learn new words through a fun UX.</p></div><span class="category-tag">Learning</span><div class="archive-actions"><a class="source-link" href="https://github.com/iakhil/parlance" aria-label="Source code for Parlance">Code ↗</a><a href="https://iakhil.github.io/parlance/" aria-label="Explore Parlance">Explore ↗</a></div></article>
+<article class="archive-item" data-category="Everyday"><span class="project-number eyebrow">09</span><div class="archive-copy"><h2><a href="https://iakhil.github.io/expense_tracker/">Expense Tracker <span aria-hidden="true">↗</span></a></h2><p>Track your expenses.</p></div><span class="category-tag">Everyday</span><div class="archive-actions"><a class="source-link" href="https://github.com/iakhil/expense_tracker" aria-label="Source code for Expense Tracker">Code ↗</a><a href="https://iakhil.github.io/expense_tracker/" aria-label="Explore Expense Tracker">Explore ↗</a></div></article>
+<article class="archive-item" data-category="Play"><span class="project-number eyebrow">10</span><div class="archive-copy"><h2><a href="https://iakhil.github.io/cric_stats/">Cricket Stats Game <span aria-hidden="true">↗</span></a></h2><p>Test your knowledge of cricket stats.</p></div><span class="category-tag">Play</span><div class="archive-actions"><a class="source-link" href="https://github.com/iakhil/cric_stats" aria-label="Source code for Cricket Stats Game">Code ↗</a><a href="https://iakhil.github.io/cric_stats/" aria-label="Explore Cricket Stats Game">Explore ↗</a></div></article>
+<article class="archive-item" data-category="Play"><span class="project-number eyebrow">11</span><div class="archive-copy"><h2><a href="https://iakhil.github.io/planet_defense/">Planet Defense <span aria-hidden="true">↗</span></a></h2><p>Defend Earth from asteroids by shooting laser.</p></div><span class="category-tag">Play</span><div class="archive-actions"><a class="source-link" href="https://github.com/iakhil/planet_defense" aria-label="Source code for Planet Defense">Code ↗</a><a href="https://iakhil.github.io/planet_defense/" aria-label="Explore Planet Defense">Explore ↗</a></div></article>
+<article class="archive-item" data-category="Play"><span class="project-number eyebrow">12</span><div class="archive-copy"><h2><a href="https://iakhil.github.io/palchemist/">Palchemist <span aria-hidden="true">↗</span></a></h2><p>Combine different elements to create new elements.</p></div><span class="category-tag">Play</span><div class="archive-actions"><a class="source-link" href="https://github.com/iakhil/palchemist" aria-label="Source code for Palchemist">Code ↗</a><a href="https://iakhil.github.io/palchemist/" aria-label="Explore Palchemist">Explore ↗</a></div></article>
+<article class="archive-item" data-category="AI &amp; tools"><span class="project-number eyebrow">13</span><div class="archive-copy"><h2><a href="https://automark.dev">AutoMark <span aria-hidden="true">↗</span></a></h2><p>A platform to assist teachers with grading.</p></div><span class="category-tag">AI &amp; tools</span><div class="archive-actions"><a class="source-link" href="https://github.com/iakhil/ai_grader" aria-label="Source code for AutoMark">Code ↗</a><a href="https://automark.dev" aria-label="Explore AutoMark">Explore ↗</a></div></article>
+<article class="archive-item" data-category="Learning"><span class="project-number eyebrow">14</span><div class="archive-copy"><h2><a href="https://iakhil.github.io/timelines/">Timelines <span aria-hidden="true">↗</span></a></h2><p>Visualize the timelines of different inventions.</p></div><span class="category-tag">Learning</span><div class="archive-actions"><a class="source-link" href="https://github.com/iakhil/timelines" aria-label="Source code for Timelines">Code ↗</a><a href="https://iakhil.github.io/timelines/" aria-label="Explore Timelines">Explore ↗</a></div></article>
+<article class="archive-item" data-category="Everyday"><span class="project-number eyebrow">15</span><div class="archive-copy"><h2><a href="https://iakhil.github.io/habit_sketch/">Habit Sketch <span aria-hidden="true">↗</span></a></h2><p>Keep track of your daily habits.</p></div><span class="category-tag">Everyday</span><div class="archive-actions"><a class="source-link" href="https://github.com/iakhil/habit_sketch" aria-label="Source code for Habit Sketch">Code ↗</a><a href="https://iakhil.github.io/habit_sketch/" aria-label="Explore Habit Sketch">Explore ↗</a></div></article>
+<article class="archive-item" data-category="AI &amp; tools"><span class="project-number eyebrow">16</span><div class="archive-copy"><h2><a href="https://wikiwise.info/">Wiki Wise <span aria-hidden="true">↗</span></a></h2><p>Summarize Wikipedia articles and have a quiz to test your understanding.</p></div><span class="category-tag">AI &amp; tools</span><div class="archive-actions"><a class="source-link" href="https://github.com/iakhil/wiki_wise" aria-label="Source code for Wiki Wise">Code ↗</a><a href="https://wikiwise.info/" aria-label="Explore Wiki Wise">Explore ↗</a></div></article>
+<article class="archive-item" data-category="Everyday"><span class="project-number eyebrow">17</span><div class="archive-copy"><h2><a href="https://iakhil.github.io/craft_resume/">Craft Resume <span aria-hidden="true">↗</span></a></h2><p>Generate a LaTeX-style resume.</p></div><span class="category-tag">Everyday</span><div class="archive-actions"><a class="source-link" href="https://github.com/iakhil/craft_resume" aria-label="Source code for Craft Resume">Code ↗</a><a href="https://iakhil.github.io/craft_resume/" aria-label="Explore Craft Resume">Explore ↗</a></div></article>
+<article class="archive-item" data-category="Everyday"><span class="project-number eyebrow">18</span><div class="archive-copy"><h2><a href="https://iakhil.github.io/destinize/">Destinize <span aria-hidden="true">↗</span></a></h2><p>Plan your next trip.</p></div><span class="category-tag">Everyday</span><div class="archive-actions"><a class="source-link" href="https://github.com/iakhil/destinize" aria-label="Source code for Destinize">Code ↗</a><a href="https://iakhil.github.io/destinize/" aria-label="Explore Destinize">Explore ↗</a></div></article>
+<article class="archive-item" data-category="AI &amp; tools"><span class="project-number eyebrow">19</span><div class="archive-copy"><h2><a href="https://iakhil.github.io/haggle_chat/">Haggle Chat <span aria-hidden="true">↗</span></a></h2><p>Negotiate your salary with the HR of CashCorp.</p></div><span class="category-tag">AI &amp; tools</span><div class="archive-actions"><a class="source-link" href="https://github.com/iakhil/haggle_chat" aria-label="Source code for Haggle Chat">Code ↗</a><a href="https://iakhil.github.io/haggle_chat/" aria-label="Explore Haggle Chat">Explore ↗</a></div></article>
+<article class="archive-item" data-category="AI &amp; tools"><span class="project-number eyebrow">20</span><div class="archive-copy"><h2><a href="https://iakhil.github.io/cardex/">Cardex <span aria-hidden="true">↗</span></a></h2><p>A web-app to help you identify a car.</p></div><span class="category-tag">AI &amp; tools</span><div class="archive-actions"><a class="source-link" href="https://github.com/iakhil/cardex" aria-label="Source code for Cardex">Code ↗</a><a href="https://iakhil.github.io/cardex/" aria-label="Explore Cardex">Explore ↗</a></div></article>
+<article class="archive-item" data-category="Learning"><span class="project-number eyebrow">21</span><div class="archive-copy"><h2><a href="https://iakhil.github.io/learn_a_word/">Learn a Word <span aria-hidden="true">↗</span></a></h2><p>A web-app to help you learn a new word and try to use it in a sentence.</p></div><span class="category-tag">Learning</span><div class="archive-actions"><a class="source-link" href="https://github.com/iakhil/learn_a_word" aria-label="Source code for Learn a Word">Code ↗</a><a href="https://iakhil.github.io/learn_a_word/" aria-label="Explore Learn a Word">Explore ↗</a></div></article>
+<article class="archive-item" data-category="Everyday"><span class="project-number eyebrow">22</span><div class="archive-copy"><h2><a href="https://iakhil.github.io/CalorifyWebsite/">Calorify <span aria-hidden="true">↗</span></a></h2><p>An app to track calories, get healthy recipes and more.</p></div><span class="category-tag">Everyday</span><div class="archive-actions"><a class="source-link" href="https://github.com/iakhil/Calorify" aria-label="Source code for Calorify">Code ↗</a><a href="https://iakhil.github.io/CalorifyWebsite/" aria-label="Explore Calorify">Explore ↗</a></div></article>
+<article class="archive-item" data-category="Learning"><span class="project-number eyebrow">23</span><div class="archive-copy"><h2><a href="http://iakhil.pythonanywhere.com/">Word Atlas <span aria-hidden="true">↗</span></a></h2><p>A word game to improve vocabulary.</p></div><span class="category-tag">Learning</span><div class="archive-actions"><a class="source-link" href="https://github.com/iakhil/wordatlas" aria-label="Source code for Word Atlas">Code ↗</a><a href="http://iakhil.pythonanywhere.com/" aria-label="Explore Word Atlas">Explore ↗</a></div></article>
+<article class="archive-item" data-category="Play"><span class="project-number eyebrow">24</span><div class="archive-copy"><h2><a href="https://iakhil.github.io/Speed-Typing/">Speed Typing <span aria-hidden="true">↗</span></a></h2><p>Measure how much time it takes for you to type all the alphabets.</p></div><span class="category-tag">Play</span><div class="archive-actions"><a class="source-link" href="https://github.com/iakhil/Speed-Typing" aria-label="Source code for Speed Typing">Code ↗</a><a href="https://iakhil.github.io/Speed-Typing/" aria-label="Explore Speed Typing">Explore ↗</a></div></article>
+<article class="archive-item" data-category="Everyday"><span class="project-number eyebrow">25</span><div class="archive-copy"><h2><a href="https://pogqj.csb.app/">Notes-Taking App <span aria-hidden="true">↗</span></a></h2><p>A simple notes-taking app.</p></div><span class="category-tag">Everyday</span><div class="archive-actions"><a href="https://pogqj.csb.app/" aria-label="Explore Notes-Taking App">Explore ↗</a></div></article>
+<article class="archive-item" data-category="AI &amp; tools"><span class="project-number eyebrow">26</span><div class="archive-copy"><h2><a href="https://chromewebstore.google.com/detail/eli5-buddy/dioeldknkgljlaanhadnoficlmoccofp">ELI5 Chrome Extension <span aria-hidden="true">↗</span></a></h2><p>Highlight any text in your browser and get its explanation in a simplified form.</p></div><span class="category-tag">AI &amp; tools</span><div class="archive-actions"><a class="source-link" href="https://github.com/iakhil/ELI5" aria-label="Source code for ELI5 Chrome Extension">Code ↗</a><a href="https://chromewebstore.google.com/detail/eli5-buddy/dioeldknkgljlaanhadnoficlmoccofp" aria-label="Explore ELI5 Chrome Extension">Explore ↗</a></div></article>
+<article class="archive-item" data-category="Everyday"><span class="project-number eyebrow">27</span><div class="archive-copy"><h2><a href="https://iakhil.github.io/Password_Generator-/">Password Generator <span aria-hidden="true">↗</span></a></h2><p>Generate secure passwords with ease.</p></div><span class="category-tag">Everyday</span><div class="archive-actions"><a class="source-link" href="https://github.com/iakhil/Password_Generator-" aria-label="Source code for Password Generator">Code ↗</a><a href="https://iakhil.github.io/Password_Generator-/" aria-label="Explore Password Generator">Explore ↗</a></div></article>
+<article class="archive-item" data-category="Play"><span class="project-number eyebrow">28</span><div class="archive-copy"><h2><a href="https://iakhil.github.io/Odds-and-Evens/">Odds and Evens <span aria-hidden="true">↗</span></a></h2><p>Score points by picking a number different from the computer. If the number you have picked is the same as the computer, you are out.</p></div><span class="category-tag">Play</span><div class="archive-actions"><a class="source-link" href="https://github.com/iakhil/Odds-and-Evens/tree/master" aria-label="Source code for Odds and Evens">Code ↗</a><a href="https://iakhil.github.io/Odds-and-Evens/" aria-label="Explore Odds and Evens">Explore ↗</a></div></article>
+</div><div class="empty-state" hidden><h2>No projects found.</h2><p>Try another search or explore a different category.</p><button class="button button-dark" type="button" id="reset-filters">Show all projects ↗</button></div>
+<a class="archive-link" href="https://github.com/iakhil"><span>Want to look under the hood?</span><span>Find me on GitHub ↗</span></a>
+</main>
+<footer class="site-footer wrap">
+    <a class="footer-name" href="index.html">Akhil Ivaturi<span class="brand-dot">.</span></a>
+    <span>A work in progress. Just like me.</span>
+    <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+  </footer>
 </body>
 </html>
-
-
