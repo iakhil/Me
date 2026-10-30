@@ -282,3 +282,58 @@ em { font-family: var(--serif); font-weight: 400; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
+
+/* Dated Jeopardy! topic notebook. */
+.topics-feature { display: flex; justify-content: space-between; align-items: center; gap: 40px; border-top: 1px solid var(--line); padding-block: 48px 64px; }
+.topics-feature h2 { font-size: clamp(35px, 4vw, 52px); font-weight: 450; letter-spacing: -.045em; line-height: 1.1; }
+.topics-feature h2 em { color: var(--orange); }
+.topics-feature p { max-width: 550px; margin: 18px 0; font-size: 15px; line-height: 1.8; color: var(--muted); }
+.topics-feature .button { flex-shrink: 0; }
+.topics-feature-date { display: block; color: var(--muted); font-size: 9px; }
+.topics-main .page-intro > .text-link { margin-bottom: 25px; }
+.topics-main .page-intro h1 { max-width: 1000px; }
+.topics-period { display: flex; flex-wrap: wrap; gap: 12px 30px; margin-top: 28px; color: var(--muted); font-size: 10px; }
+.topic-overview { border-top: 1px solid var(--line); padding-block: 40px 64px; }
+.topic-overview .section-heading, .topic-games .section-heading { margin-bottom: 20px; }
+.topics-note { max-width: 780px; color: var(--muted); font-size: 14px; line-height: 1.8; margin-bottom: 28px; }
+.theme-grid { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+.theme-grid li { padding: 24px 24px 24px 0; border-bottom: 1px solid var(--line); }
+.theme-grid h3 { font-size: 17px; font-weight: 500; letter-spacing: -.02em; line-height: 1.4; }
+.theme-grid p { font-size: 13px; color: var(--muted); line-height: 1.8; margin-top: 10px; }
+.topic-games { margin-bottom: 50px; }
+.game-topics { border-bottom: 1px solid var(--line); }
+.game-topics:first-of-type { border-top: 1px solid var(--line); }
+.game-topics summary { display: flex; align-items: center; justify-content: space-between; gap: 20px; cursor: pointer; padding-block: 24px; list-style: none; }
+.game-topics summary::-webkit-details-marker { display: none; }
+.game-topics summary:focus-visible { outline: 3px solid var(--orange); outline-offset: 4px; }
+.game-topics summary:hover time { color: var(--orange); }
+.game-topics time { font-size: 23px; letter-spacing: -.035em; }
+.game-day { display: inline-block; color: var(--muted); font-size: 9px; margin-left: 25px; }
+.game-toggle { display: grid; place-items: center; font-size: 24px; border: 1px solid var(--line); border-radius: 50%; width: 34px; height: 34px; flex-shrink: 0; }
+.game-topics[open] .game-toggle { transform: rotate(45deg); color: var(--orange); }
+.game-topics-body { padding: 0 0 30px; }
+.round-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 35px; padding: 25px; background: #eaeae0; border-radius: 5px; }
+.round-topics h3 { font: 400 11px/1.6 var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--orange); }
+.round-topics ul { padding-left: 17px; margin-block: 15px 0; }
+.round-topics li { font-size: 14px; line-height: 1.8; margin-bottom: 4px; }
+.final-topic { grid-column: 1 / -1; border-top: 1px solid #c8cbbd; padding-top: 17px; }
+.final-topic p { font-size: 15px; line-height: 1.7; margin-top: 9px; }
+.game-topics-body > .text-link { margin-top: 15px; line-height: 1.6; }
+.topics-method { border: 1px solid var(--line); border-radius: 5px; padding: 28px; margin-bottom: 40px; }
+.topics-method h2 { font-size: 20px; font-weight: 500; }
+.topics-method p { color: var(--muted); font-size: 13px; line-height: 1.8; margin-top: 14px; max-width: 850px; }
+.topics-method a { text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 850px) {
+  .theme-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .topics-feature { align-items: flex-start; flex-direction: column; gap: 22px; }
+}
+@media (max-width: 520px) {
+  .topics-main .page-intro h1 { font-size: 58px; }
+  .topics-main .section-heading h2 { font-size: 38px; }
+  .theme-grid { grid-template-columns: 1fr; }
+  .theme-grid li { padding-block: 19px; }
+  .game-topics time { font-size: 21px; }
+  .game-day { display: block; margin: 7px 0 0; }
+  .round-grid { grid-template-columns: 1fr; padding: 20px; gap: 24px; }
+  .topics-method { padding: 22px; }
+}

@@ -23,3 +23,9 @@ The older Express/EJS demo in `server.js` and `views/` is separate from the stat
 ## Social preview
 
 `public/og.png` was created with the built-in image generation tool. The brief: a warm paper landscape card with near-black oversized “Akhil Ivaturi.” typography, burnt-orange accents, “Curious by default. Builder by instinct.” in italic serif, thin orbital rings, and “PROJECTS / IDEAS / EXPERIMENTS” in monospace. The Open Graph image URL uses this repository’s existing GitHub Pages address; update it if the hosting domain changes.
+
+## Jeopardy! topic notebook
+
+`jeopardy.html` contains editorial study-topic summaries for the 22 regular weekday games from September 30 through October 29, 2026 (an inclusive 30-day window). The homepage links to it. Each date expands without JavaScript to show Jeopardy!, Double Jeopardy!, and Final Jeopardy! summaries; October 13 also includes the tiebreaker.
+
+The page links each game to the board reviewed on J! Archive or Jeopardy Today. Topic labels are interpretations, not official category transcriptions. The eight overview areas are editorial groupings, not clue-frequency statistics. This is a manually maintained snapshot, not a live feed. To refresh it, review the linked archives, edit the dated entries and sources, and update the coverage dates, game count, and review date on both the notebook and homepage.
